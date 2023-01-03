@@ -4,6 +4,13 @@
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet');
 
 @font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'NanumSquareRound';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
     font-weight: normal;
@@ -20,3 +27,4 @@ html,
 body {
     font-family: 'NanumSquareRound';
 }
+

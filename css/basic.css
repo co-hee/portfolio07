@@ -5,4 +5,49 @@
 
 .sec {
     padding: 100px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -4px;
+    line-height: 1.2;
+}
+
+.sec .inner>em:first-child {
+    position: relative;
+    display: inline-block;
+    padding: 25px 48px 22px;
+
+    color: #b96560;
+    background: #ffedd1;
+    border-radius: 55%;
+    font-weight: 800;
+    z-index: 999;
+
+    margin: 0 auto 30px auto;
+}
+
+.sec .inner>em:first-child::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 88%;
+    height: 70%;
+    border-radius: 55%;
+
+    border: 2.5px solid #b9646089;
+}
+
+.sec h2 {
+    color: #e1d0c9;
+}
+
+.sec h2 em {
+    display: block;
+    color: #fff;
 }

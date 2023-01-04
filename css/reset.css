@@ -39,6 +39,7 @@ li {
 
 em,
 i,
-strong {
+strong,
+address {
     font-style: normal;
 }

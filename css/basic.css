@@ -20,8 +20,8 @@ h2 {
     display: inline-block;
     padding: 25px 48px 22px;
 
-    color: #b96560;
-    background: #ffedd1;
+    color: #fff;
+    background: #d2a890;
     border-radius: 55%;
     font-weight: 800;
     z-index: 999;
@@ -40,7 +40,7 @@ h2 {
     height: 70%;
     border-radius: 55%;
 
-    border: 2.5px solid #b9646089;
+    border: 2.5px solid #a8765f;
 }
 
 .sec h2 {

@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 999999;
 
     background: transparent;
     margin: 0 auto;
@@ -102,11 +102,9 @@
 
 .mainVisual .inner .event {
     position: relative;
-    gap: 60px;
-
     display: flex;
     margin: 59px 48px 44px;
-    padding: 20px 20px 20px 50px;
+    padding: 60px 20px 60px 50px;
     border-radius: 15px;
     background: url(../img/visual-event.jpg)repeat;
     text-align: left;
@@ -116,38 +114,48 @@
 .mainVisual .inner .event::before {
     content: '';
     position: absolute;
-    top: -40px;
+    top: -18px;
     left: -103px;
     width: 100%;
     height: 100%;
     background: url(../img/main-pin.png)no-repeat;
+
 }
 
 .mainVisual .inner .event>div {
     display: flex;
     flex: 1;
+    vertical-align: middle;
 }
 
 .mainVisual .inner .event .event01::before {
     content: '';
     display: block;
-    width: 46%;
+    width: 100%;
     height: 100%;
     background: url(../img/visual-event1.png) no-repeat;
+    transform: translate(40px, 0);
     background-size: 95px 92px;
+    flex: 1;
 }
 
 .mainVisual .inner .event .event02::before {
     content: '';
     display: block;
-    width: 46%;
+    width: 100%;
     height: 100%;
     background: url(../img/visual-event2.png) no-repeat;
     background-size: 95px 92px;
+    flex: 1;
 }
 
 .mainVisual .inner .event .event01 {
     border-right: 1px solid #ddd;
+    padding: 0 50px 0 10px;
+}
+
+.mainVisual .inner .event .event02 {
+    padding-left: 50px;
 }
 
 .mainVisual .inner .event strong {
@@ -169,17 +177,16 @@
 }
 
 .mainVisual .inner .event p {
-
-    font-size: 20px;
     font-weight: 200;
     letter-spacing: -1px;
     line-height: 1.4;
     color: #342323;
+    font-weight: 200;
 }
 
-.mainVisual figure img {
+/* .mainVisual figure img {
     width: 350px;
-}
+} */
 
 /* } .mainVisual  */
 
@@ -187,12 +194,12 @@
 /* .mainContent { */
 
 .mainContent {
-    background: #9b604b url(../img/main-flower.png) no-repeat center top;
+    background: url(../img/main-flower.png)no-repeat left 162px top 430px, url(../img/main-flower2.png)no-repeat right 98px top 445px, url(../img/main-envelope.png)no-repeat top 385px right 190px #9b604b;
     text-align: center;
     align-items: center;
 }
 
-.mainContent strong {
+.mainContent .inner>em:first-child {
     position: relative;
     display: inline-block;
     padding: 25px 48px 22px;
@@ -203,10 +210,10 @@
     font-weight: 800;
     z-index: 999;
 
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
 }
 
-.mainContent strong::before {
+.mainContent .inner>em:first-child::before {
     position: absolute;
     content: '';
     top: 50%;
@@ -255,10 +262,10 @@
     content: '';
     left: 50%;
     bottom: 0;
-    transform: translate(0, -50%);
-    width: 100%;
+    transform: translate(-50%, 0);
+    width: 60%;
     height: 3px;
-    background: url(../img/letter-line.png) no-repeat;
+    background: url(../img/letter-line.png)no-repeat center center /cover;
 }
 
 .mainContent .letter p {
@@ -292,6 +299,7 @@
 
     left: 50%;
     top: -16px;
+    transform: translate(-50%, 0);
 
 }
 
@@ -325,6 +333,7 @@
     font-size: 15px;
     letter-spacing: -0.5px;
     opacity: 0.6;
+    margin-bottom: 60px;
 }
 
 .mainInvolve .inner .md_hover {
@@ -333,78 +342,261 @@
 
 .mainInvolve .inner .product {
     display: grid;
-}
-
-.mainInvolve .inner .product .cont {
+    grid-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .mainInvolve .product .cont>div>p {
-    padding: 0 26px;
-    width: 100%;
     position: absolute;
-    left: 0;
-    bottom: 32px;
+    bottom: 20px;
+    left: 30px;
+    width: 100%;
     font-size: 22px;
     letter-spacing: -1px;
     color: #fff;
+    text-align: left;
+    text-shadow: 0 0 5px #333;
 }
 
-.mainInvolve .product .cont .m01 {
-    background: url(../img/reward-item1.jpg) no-repeat;
+.mainInvolve .product .cont>div {
+    position: relative;
+    height: 350px;
+    border-radius: 15px;
 }
 
-.mainInvolve .product .cont .m02 {
-    background: url(../img/reward-item2.jpg) no-repeat;
+.mainInvolve .product .cont .md01 {
+    background: url(../img/reward-item1.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m03 {
-    background: url(../img/reward-item3.jpg) no-repeat;
+.mainInvolve .product .cont .md02 {
+    background: url(../img/reward-item2.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m04 {
-    background: url(../img/reward-item4.jpg) no-repeat;
+.mainInvolve .product .cont .md03 {
+    background: url(../img/reward-item3.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m05 {
-    background: url(../img/reward-item5.jpg) no-repeat;
+.mainInvolve .product .cont .md04 {
+    background: url(../img/reward-item4.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m06 {
-    background: url(../img/reward-item6.jpg) no-repeat;
+.mainInvolve .product .cont .md05 {
+    background: url(../img/reward-item5.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m07 {
-    background: url(../img/reward-item7.jpg) no-repeat;
+.mainInvolve .product .cont .md06 {
+    background: url(../img/reward-item6.jpg) no-repeat center center/cover;
 }
 
-.mainInvolve .product .cont .m08 {
-    background: url(../img/reward-item8.jpg) no-repeat;
+.mainInvolve .product .cont .md07 {
+    background: url(../img/reward-item7.jpg) no-repeat center center/cover;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.mainInvolve .product .cont .md08 {
+    background: url(../img/reward-item8.jpg) no-repeat center center/cover;
+}
 
 
 
 
 /* } .mainInvolve */
+
+
+/* .VideoBanner { */
+
+.VideoBanner {
+    text-align: center;
+}
+
+.VideoBanner .video_wrap {
+    position: relative;
+    font-weight: 800;
+}
+
+.VideoBanner .video_wrap::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.24;
+}
+
+.VideoBanner .video_wrap h2 {
+    width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #c2c2c2;
+}
+
+.VideoBanner .video_wrap h2 strong {
+    color: #fff;
+}
+
+.VideoBanner video {
+    width: 100vw;
+
+}
+
+/* } .VideoBanner */
+
+
+/* .event1 { */
+
+.event1 {
+    background: url(../img/main-event1.jpg);
+}
+
+.event1::before {
+    background: url(../img/);
+}
+
+.event1 h2 {
+    color: #342323;
+}
+
+.event1 h2 em {
+    display: inline;
+    color: #ae816d;
+}
+
+.event1 h2 strong {
+    font-size: 65px;
+}
+
+.event1 p {
+    font-size: 19px;
+    line-height: 1.79;
+    letter-spacing: -1px;
+    color: #342323;
+    margin: 30px 0 30px 0;
+}
+
+.event1 p strong {
+    font-weight: 800;
+}
+
+.event1 .f_inner .case {
+    display: flex;
+    align-items: center;
+}
+
+.event1 .f_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event1 .f_inner span {
+    width: 33px;
+    height: 20px;
+    margin: 0 0 0 40px;
+}
+
+/* } .event1 */
+
+
+
+/* .event2 { */
+
+.event2 {}
+
+.event2 .inner h2 strong {
+    color: #342323;
+    margin-bottom: 15px;
+}
+
+.event2 .inner>p {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.79;
+    letter-spacing: -1px;
+    color: #342323;
+    margin-bottom: 30px;
+}
+
+.event2 .inner .md_case {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.event2 .inner .md_case .txt {
+    position: relative;
+
+}
+
+.event2 .md_case .md h3 {
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+
+    letter-spacing: -1px;
+}
+
+.event2 .md_case .md p {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.event2 .md_case div {
+    width: 370px;
+    height: 420px;
+    border-radius: 15px;
+}
+
+.event2 .md_case .md01 {
+    background: url(../img/gift-item1.jpg) no-repeat center center;
+}
+
+.event2 .md_case .md02 {
+    background: url(../img/gift-item2.jpg) no-repeat center center;
+}
+
+.event2 .md_case .md03 {
+    background: url(../img/gift-item3.jpg) no-repeat center center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* } .event2 */

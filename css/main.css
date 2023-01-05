@@ -8,6 +8,16 @@
     margin: 0 auto;
 }
 
+.header.on {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+
+    background: #fff;
+    margin: 0 auto;
+}
+
 .header::before {
     content: '';
     position: absolute;
@@ -21,8 +31,6 @@
 .header .inner {
     display: flex;
     justify-content: space-between;
-    line-height: 100px;
-
 }
 
 .header .inner h1 img {
@@ -34,6 +42,19 @@
     gap: 50px;
     font-size: 20px;
     font-weight: 800;
+}
+
+.header .inner .gnb ul li {
+    padding: 20px 30px;
+    background: none;
+}
+
+.header .inner .gnb ul li.on {
+    background: url(../img/nav-on.png) no-repeat;
+    color: #fff;
+    width: 95%;
+    height: 95%;
+
 }
 
 .header .inner figure {
@@ -123,7 +144,7 @@
 .mainVisual .inner .event::before {
     content: '';
     position: absolute;
-    top: -18px;
+    top: -17px;
     left: -103px;
     width: 100%;
     height: 100%;
@@ -801,12 +822,25 @@
     margin-bottom: 24px;
     border-radius: 10px;
     background: #fff;
+    cursor: pointer;
 
+}
+
+.FAQ .q .left {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .FAQ .q .left::before {
     content: '';
-    background: url(../img/q-ic.png);
+    position: absolute;
+    width: 32px;
+    height: 30px;
+    background: url(../images/q-ic.png)no-repeat;
+    background-size: contain;
+    top: -4px;
+    left: 0;
 }
 
 .FAQ .q .left h3 {
@@ -816,30 +850,50 @@
     letter-spacing: -1px;
     line-height: 1.3;
     text-align: left;
-    margin-bottom: 30px;
+
 }
 
-.FAQ .q .left p {
-    /* visibility: hidden;
-    height: 0; */
+.FAQ .q p {
+
     text-align: left;
     font-size: 17px;
     letter-spacing: -1px;
     color: #666;
     line-height: 1.765;
+
+    margin-top: 30px;
+
+    visibility: hidden;
+    height: 0;
+
+    transition: 0.5s;
 }
 
-/* 
-.FAQ .q .left p.on {
+
+.FAQ .q p.on {
     visibility: visible;
-    text-align: left;
-    font-size: 17px;
-    letter-spacing: -1px;
-    color: #666;
-    line-height: 1.765;
-} */
+}
 
+.FAQ .q .left i::before {
+    width: 3px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) rotate(0deg);
+    -webkit-transform: translateX(-50%) rotate(0deg);
+    -ms-transform: translateX(-50%) rotate(0deg);
+    transition: .3s ease;
+}
 
+.FAQ .q .left i::after {
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
 
 
 
@@ -939,9 +993,10 @@
 .gallery .bar {
     position: relative;
     width: 1000px;
-    height: 4px;
+    height: 3px;
     background: #ddd;
     transform: translate(0, 5px);
+    border-radius: 2px;
 }
 
 .gallery .bar span {
@@ -979,6 +1034,7 @@
     position: relative;
     font-weight: 800;
     overflow: hidden;
+
 }
 
 .f_banner .video_wrap::before {

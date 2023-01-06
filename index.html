@@ -28,23 +28,25 @@
                 </h1>
                 <nav class="gnb">
                     <ul>
-                        <li><a href="">퀸즈펀딩</a></li>
-                        <li><a href="">펀딩 참여하기</a></li>
-                        <li><a href="">후기 작성하기</a></li>
-                        <li><a href="">FAQ</a></li>
+                        <li><a href="#c01">퀸즈펀딩</a></li>
+                        <li><a href="#c02">펀딩 참여하기</a></li>
+                        <li><a href="#c03">후기 작성하기</a></li>
+                        <li><a href="#c04">FAQ</a></li>
                     </ul>
                 </nav>
                 <figure>
-                    <img src="./img/cart-nav.png" alt="">
-                    <p>펀딩바구니</p>
+                    <a href="">
+                        <img src="./img/cart-nav.png" alt="">
+                        <p>펀딩바구니</p>
+                    </a>
                 </figure>
-                <div class="responsive">
+                <!-- <div class="responsive">
                     <i class="xi-bars"></i>
-                </div>
+                </div> -->
             </div>
         </div>
         <main>
-            <section class="mainVisual sec">
+            <section class="mainVisual sec mark" id="c01">
                 <div class="inner">
 
                     <h2 data-aos="fade-up" class="aos-init aos-animate">
@@ -106,7 +108,7 @@
                     <p data-aos="fade-up" data-aos-delay="300" class="aos-init aos-animate">함께 응원해주세요!</p>
                 </div>
             </section>
-            <section class="mainInvolve sec">
+            <section class="mainInvolve sec mark" id="c02">
                 <div class="inner">
                     <em>자립을 위한 후원</em>
                     <h2>미혼한부모의 자립을 위해 후원해주시면,<br />
@@ -247,7 +249,7 @@
 
 
             </section>
-            <section class="event2 sec">
+            <section class="event2 sec mark" id="c03">
                 <div class="inner">
                     <em>EVENT 2</em>
                     <h2>퀸즈펀딩 <strong>참여 후기</strong></h2>
@@ -339,7 +341,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="FAQ sec">
+            <section class="FAQ sec mark" id="c04">
                 <div class="inner">
                     <em>FAQ</em>
                     <h2>
@@ -353,7 +355,7 @@
                                 <h3>궁금한 점이 있을 때 어디로 연락해야하나요?</h3>
                                 <i></i>
                             </div>
-                            <p class="on">홀트아동복지회 미혼한부모지원센터 02-331-7082 (평일 AM8:00~PM5:00)로 연락주시면 됩니다.</p>
+                            <p>홀트아동복지회 미혼한부모지원센터 02-331-7082 (평일 AM8:00~PM5:00)로 연락주시면 됩니다.</p>
 
                         </li>
                         <li>
@@ -377,7 +379,7 @@
                                 리워드로 받고 싶은 제품군 사진을 클릭하면 상세페이지로 이동합니다.</p>
 
                         </li>
-                        <li>
+                        <!-- <li>
 
                             <div class="left">
                                 <h3>펀딩참여 시 선택한 리워드 상품은 언제 발송되나요?</h3>
@@ -393,7 +395,7 @@
                                 *식품의 경우 신선도 유지를 위해 배송기간이 조정될 수 있습니다.
                                 *리워드 제품의 발송기간은 상황에 따라 조정될 수 있습니다.</p>
 
-                        </li>
+                        </li> -->
                         <li>
 
                             <div class="left">
@@ -538,50 +540,84 @@
             </div>
         </div>
     </div>
+
+    <!-- <script src="./js/TweenMax.min.js"></script> -->
     <script>
 
 
-        function updateScroller() {
+        // var html = document.documentElement;
+        // var body = document.body;
 
-            var resized = scroller.resizeRequest > 0;
+        // var scroller = {
+        //     target: document.querySelector(".Wrap"),
+        //     ease: 0.05, // <= scroll speed
+        //     endY: 0,
+        //     y: 0,
+        //     resizeRequest: 1,
+        //     scrollRequest: 0,
+        // };
 
-            if (resized) {
-                var height = scroller.target.clientHeight;
-                body.style.height = height + "px";
-                scroller.resizeRequest = 0;
-            }
+        // var requestId = null;
 
-            var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+        // TweenLite.set(scroller.target, {
+        //     rotation: 0.01,
+        //     force3D: true
+        // });
 
-            scroller.endY = scrollY;
-            scroller.y += (scrollY - scroller.y) * scroller.ease;
+        // window.addEventListener("load", onLoad);
 
-            if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
-                scroller.y = scrollY;
-                scroller.scrollRequest = 0;
-            }
+        // function onLoad() {
+        //     updateScroller();
+        //     window.focus();
+        //     window.addEventListener("resize", onResize);
+        //     document.addEventListener("scroll", onScroll);
+        // }
 
-            TweenLite.set(scroller.target, {
-                y: -scroller.y
-            });
+        // function updateScroller() {
 
-            requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
-        }
+        //     var resized = scroller.resizeRequest > 0;
 
-        function onScroll() {
-            scroller.scrollRequest++;
-            if (!requestId) {
-                requestId = requestAnimationFrame(updateScroller);
-            }
-        }
+        //     if (resized) {
+        //         var height = scroller.target.clientHeight;
+        //         body.style.height = height + "px";
+        //         scroller.resizeRequest = 0;
+        //     }
+
+        //     var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+
+        //     scroller.endY = scrollY;
+        //     scroller.y += (scrollY - scroller.y) * scroller.ease;
+
+        //     if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
+        //         scroller.y = scrollY;
+        //         scroller.scrollRequest = 0;
+        //     }
+
+        //     TweenLite.set(scroller.target, {
+        //         y: -scroller.y
+        //     });
+
+        //     requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
+        // }
+
+        // function onScroll() {
+        //     scroller.scrollRequest++;
+        //     if (!requestId) {
+        //         requestId = requestAnimationFrame(updateScroller);
+        //     }
+        // }
+
+        // function onResize() {
+        //     scroller.resizeRequest++;
+        //     if (!requestId) {
+        //         requestId = requestAnimationFrame(updateScroller);
+        //     }
+        // }
+
 
 
         AOS.init();
 
-
-        $(window).on('scroll', function () {
-            console.log($(window).scrollTop())
-        })
     </script>
 </body>
 
